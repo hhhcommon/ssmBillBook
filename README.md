@@ -20,7 +20,7 @@ android前端项目地址：https://github.com/zas023/CocoBill
 `bill/user`
 
 **调用例子:**
-`http://139.199.176.173:8080/ssmBillBook/bill/user/1/2017/12`
+`http://127.0.0.1:8080/ssmBillBook/bill/user/1/2017/12`
 
 __接口返回数据__
 ```javascript
@@ -42,7 +42,7 @@ __接口返回数据__
 `bill/chart`
 
 **调用例子:**
-`http://139.199.176.173:8080/ssmBillBook/bill/chart/1/2017/12`
+`http://127.0.0.1:8080/ssmBillBook/bill/chart/1/2017/12`
 
 __接口返回数据__
 ```javascript
@@ -62,7 +62,7 @@ __接口返回数据__
 `bill/pay`
 
 **调用例子:**
-`http://139.199.176.173:8080/ssmBillBook/bill/pay/1/2017/12`
+`http://127.0.0.1:8080/ssmBillBook/bill/pay/1/2017/12`
 
 __接口返回数据__
 ```javascript
@@ -84,7 +84,7 @@ __接口返回数据__
 `bill/add`
 
 **调用例子:**
-`http://139.199.176.173:8080/ssmBillBook/bill/add?userid=1&sortid=2&payid=3&cost=555.0&crdate=2017-12-27%2020:58:27&content=test&income=false`
+`http://127.0.0.1:8080/ssmBillBook/bill/add?userid=1&sortid=2&payid=3&cost=555.0&crdate=2017-12-27%2020:58:27&content=test&income=false`
 
 __接口返回数据__
 ```javascript
@@ -108,7 +108,7 @@ __接口返回数据__
 `bill/update`
 
 **调用例子:**
-`http://139.199.176.173:8080/ssmBillBook/bill/add?id=80&userid=1&sortid=2&payid=3&cost=555.0&crdate=2017-12-27%2020:58:27&content=test&income=false`
+`http://127.0.0.1:8080/ssmBillBook/bill/add?id=80&userid=1&sortid=2&payid=3&cost=555.0&crdate=2017-12-27%2020:58:27&content=test&income=false`
 
 __接口返回数据__
 ```javascript
@@ -127,7 +127,7 @@ __接口返回数据__
 `bill/delete`
 
 **调用例子:**
-`http://139.199.176.173:8080/ssmBillBook/bill/delete/80`
+`http://127.0.0.1:8080/ssmBillBook/bill/delete/80`
 
 __接口返回数据__
 ```javascript
@@ -146,7 +146,7 @@ __接口返回数据__
 `bill/find`
 
 **调用例子:**
-`http://139.199.176.173:8080/ssmBillBook/bill/find/71`
+`http://127.0.0.1:8080/ssmBillBook/bill/find/71`
 
 __接口返回数据__
 ```javascript
@@ -167,7 +167,7 @@ __接口返回数据__
 `user/login`
 
 **调用例子:**
-`http://139.199.176.173:8080/ssmBillBook/user/login?username=admin&password=admin`
+`http://127.0.0.1:8080/ssmBillBook/user/login?username=admin&password=admin`
 
 __接口返回数据__
 ```javascript
@@ -186,7 +186,7 @@ __接口返回数据__
 `user/sign`
 
 **调用例子:**
-`http://139.199.176.173:8080/ssmBillBook/user/sign?username=admin&password=admin&mail=375027533@qq.com`
+`http://127.0.0.1:8080/ssmBillBook/user/sign?username=admin&password=admin&mail=375027533@qq.com`
 
 __接口返回数据__
 ```javascript
@@ -207,7 +207,7 @@ __接口返回数据__
 `user/update`
 
 **调用例子:**
-`http://139.199.176.173:8080/ssmBillBook/user/update?id=16&username=user&gender=F&phone=18725912261&mail=375027533@qq.com`
+`http://127.0.0.1:8080/ssmBillBook/user/update?id=16&username=user&gender=F&phone=18725912261&mail=375027533@qq.com`
 
 __接口返回数据__
 ```javascript
@@ -225,7 +225,7 @@ __接口返回数据__
 `user/forgetPw`
 
 **调用例子:**
-`http://139.199.176.173:8080/ssmBillBook/user/forgetPw?username=user&mail=375027533@qq.com`
+`http://127.0.0.1:8080/ssmBillBook/user/forgetPw?username=user&mail=375027533@qq.com`
 
 __接口返回数据__
 ```javascript
@@ -244,7 +244,7 @@ __接口返回数据__
 `user/changePw`
 
 **调用例子:**
-`http://139.199.176.173:8080/ssmBillBook/user/changePw?username=user&&password=admin&code=123456`
+`http://127.0.0.1:8080/ssmBillBook/user/changePw?username=user&&password=admin&code=123456`
 
 __接口返回数据__
 ```javascript
@@ -265,13 +265,13 @@ __接口返回数据__
 `file/upload`
 
 **调用例子:**
-`http://139.199.176.173:8080/ssmBillBook/file/upload`
+`http://127.0.0.1:8080/ssmBillBook/file/upload`
 
 **测试地址:**
-`http://139.199.176.173:8080/ssmBillBook/file/test`
+`http://127.0.0.1:8080/ssmBillBook/file/test`
 
 **文件地址:**
-`http://139.199.176.173:8080/ssmBillBook/upload/1_1514361165324.png`
+`http://127.0.0.1:8080/ssmBillBook/upload/1_1514361165324.png`
 
 __接口返回数据__
 ```javascript
@@ -294,7 +294,7 @@ ok
 `note/user`
 
 **调用例子:**
-`http://139.199.176.173:8080/ssmBillBook/note/user/1`
+`http://127.0.0.1:8080/ssmBillBook/note/user/1`
 
 __接口返回数据__
 ```javascript

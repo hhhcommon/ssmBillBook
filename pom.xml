@@ -147,5 +147,41 @@
     </dependencies>
     <build>
         <finalName>ssmBillBook</finalName>
+
+        <plugins>
+            <!-- mvn mybatis-generator:generate -->
+            <plugin>
+                <groupId>org.mybatis.generator</groupId>
+                <artifactId>mybatis-generator-maven-plugin</artifactId>
+                <version>1.3.5</version>
+                <configuration>
+                    <configurationFile>generatorConfig.xml</configurationFile>
+                </configuration>
+                <dependencies>
+                    <!-- 数据库驱动 -->
+                    <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>5.1.35</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+
+            <!-- 本地调试tomcat -->
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.1</version>
+                <configuration>
+                    <server>tomcat7</server>
+                    <path>/ssmBillBook</path>
+                    <uriEncoding>utf-8</uriEncoding>
+                    <port>8080</port>
+                    <systemProperties>
+                        <CONF_PATH>${project.basedir}/target/classes</CONF_PATH>
+                    </systemProperties>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 </project>

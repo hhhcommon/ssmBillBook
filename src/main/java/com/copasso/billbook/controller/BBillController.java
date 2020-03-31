@@ -126,7 +126,7 @@ public class BBillController {
                                                       @PathVariable("yy") String year, @PathVariable("mm") String month) {
 
         MonthBillListBean monthBillListBean = new MonthBillListBean();
-        List<MonthBillListBean.DayBillList> daylist = new ArrayList<>();
+        List<MonthBillListBean.DayBillList> daylist = new ArrayList<MonthBillListBean.DayBillList>();
 
         monthBillListBean.setT_income(bBillService.getTotalIncomeByUserIdWithYearMonth(id, year + "-" + month));
         monthBillListBean.setT_outcome(bBillService.getTotalOutcomeByUserIdWithYearMonth(id, year + "-" + month));
@@ -172,8 +172,8 @@ public class BBillController {
     public MonthChartListBean findChartByUserIdWithYM(@PathVariable("userid") Integer userid,
                                                       @PathVariable("yy") String year, @PathVariable("mm") String month) {
         MonthChartListBean monthChartListBean = new MonthChartListBean();
-        List<MonthChartListBean.SortTypeList> outSortlist=new ArrayList<>();
-        List<MonthChartListBean.SortTypeList> inSortlist=new ArrayList<>();
+        List<MonthChartListBean.SortTypeList> outSortlist=new ArrayList<MonthChartListBean.SortTypeList>();
+        List<MonthChartListBean.SortTypeList> inSortlist=new ArrayList<MonthChartListBean.SortTypeList>();
         //获取用户的账单分类情况
         List<BSort> outSortList=bSortService.findOutSortByUserId(userid);
         List<BSort> inSortList=bSortService.findInSortByUserId(userid);
@@ -241,7 +241,7 @@ public class BBillController {
     public MonthPayListBean findPayInfoByUserIdWithYM(@PathVariable("userid") Integer userid,
                                                       @PathVariable("yy") String year, @PathVariable("mm") String month) {
         MonthPayListBean monthPayListBean = new MonthPayListBean();
-        List<MonthPayListBean.PayTypeListBean> list = new ArrayList<>();
+        List<MonthPayListBean.PayTypeListBean> list = new ArrayList<MonthPayListBean.PayTypeListBean>();
         //获取用户的账单分类情况
         List<BPay> bPayList=bPayService.findPayinfoByUserId(userid);
         //获取用户此月总收支
