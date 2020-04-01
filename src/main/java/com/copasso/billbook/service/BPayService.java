@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * 支付信息payInfo操作类
+ * 支付信息Pay服务类
  */
 @Service
 public class BPayService {
@@ -17,29 +17,32 @@ public class BPayService {
     private BPayMapper bPayMapper;
 
     /**
-     *通过用户id查询用户的支付方式，包含系统自带
+     * 通过用户id查询用户的支付方式，包含系统自带
+     *
      * @param id
      * @return
      */
-    public List<BPay> findPayinfoByUserId(int id){
+    public List<BPay> findPayinfoByUserId(String id) {
         return bPayMapper.selectByUserId(id);
     }
 
     /**
      * 添加支付方式，返回操作数
+     *
      * @param bPay
      * @return
      */
-    public int addPayinfo(BPay bPay){
+    public int addPayinfo(BPay bPay) {
         return bPayMapper.insert(bPay);
     }
 
     /**
      * 更新支付方式，返回操作数
+     *
      * @param bPay
      * @return
      */
-    public int updatePayinfo(BPay bPay){
+    public int updatePayinfo(BPay bPay) {
         return bPayMapper.updateByPrimaryKey(bPay);
     }
 }

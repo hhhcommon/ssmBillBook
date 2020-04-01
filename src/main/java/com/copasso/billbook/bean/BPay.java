@@ -3,7 +3,7 @@ package com.copasso.billbook.bean;
 public class BPay {
     private Integer id;
 
-    private Integer uid;
+    private String uid;
 
     private String payName;
 
@@ -11,18 +11,18 @@ public class BPay {
 
     private String payNum;
 
-    public BPay(){
+    public BPay() {
         super();
     }
 
-    public BPay( Integer uid, String payName, String payImg, String payNum) {
+    public BPay(String uid, String payName, String payImg, String payNum) {
         this.uid = uid;
         this.payName = payName;
         this.payImg = payImg;
         this.payNum = payNum;
     }
 
-    public BPay(Integer id, Integer uid, String payName, String payImg, String payNum) {
+    public BPay(Integer id, String uid, String payName, String payImg, String payNum) {
         this.id = id;
         this.uid = uid;
         this.payName = payName;
@@ -38,11 +38,11 @@ public class BPay {
         this.id = id;
     }
 
-    public Integer getUid() {
+    public String getUid() {
         return uid;
     }
 
-    public void setUid(Integer uid) {
+    public void setUid(String uid) {
         this.uid = uid;
     }
 

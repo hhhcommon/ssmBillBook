@@ -3,14 +3,14 @@ package com.copasso.billbook.bean;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BSortExample {
+public class BSortCriteria {
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
 
-    public BSortExample() {
+    public BSortCriteria() {
         oredCriteria = new ArrayList<Criteria>();
     }
 

@@ -3,14 +3,14 @@ package com.copasso.billbook.bean;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BPayExample {
+public class BPayCriteria {
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
 
-    public BPayExample() {
+    public BPayCriteria() {
         oredCriteria = new ArrayList<Criteria>();
     }
 

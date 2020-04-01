@@ -3,14 +3,14 @@ package com.copasso.billbook.bean;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BUserExample {
+public class BUserCriteria {
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
 
-    public BUserExample() {
+    public BUserCriteria() {
         oredCriteria = new ArrayList<Criteria>();
     }
 

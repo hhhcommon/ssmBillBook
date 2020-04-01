@@ -13,7 +13,7 @@ import java.util.Random;
  */
 public class UploadPictureUtils {
 
-    public  static  String addMutiparFile(MultipartFile file) throws IOException {
+    public static String addMutiparFile(MultipartFile file) throws IOException {
         System.out.println("上传的文件" + file);
         if (file.isEmpty()) {
             return null;

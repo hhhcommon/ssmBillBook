@@ -5,17 +5,17 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration>
-	<settings>
-		<setting name="mapUnderscoreToCamelCase" value="true" />
-	</settings>
-	<typeAliases>
-		<package name="com.copasso.billbook.bean"></package>
-	</typeAliases>
-	<!--注册分页插件 -->
-	<plugins>
-		<plugin interceptor="com.github.pagehelper.PageInterceptor">
-			<property name="reasonable" value="true" />
-		</plugin>
-	</plugins>
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+    <typeAliases>
+        <package name="com.copasso.billbook.bean"></package>
+    </typeAliases>
+    <!--注册分页插件 -->
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+            <property name="reasonable" value="true"/>
+        </plugin>
+    </plugins>
 
 </configuration>

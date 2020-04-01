@@ -1,14 +1,16 @@
 package com.copasso.billbook.dao;
 
 import com.copasso.billbook.bean.BBill;
-import com.copasso.billbook.bean.BBillExample;
+import com.copasso.billbook.bean.BBillCriteria;
+
 import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 
 public interface BBillMapper {
-    long countByExample(BBillExample example);
+    long countByExample(BBillCriteria example);
 
-    int deleteByExample(BBillExample example);
+    int deleteByExample(BBillCriteria example);
 
     int deleteByPrimaryKey(Integer id);
 
@@ -16,30 +18,39 @@ public interface BBillMapper {
 
     int insertSelective(BBill record);
 
-    List<BBill> selectByExample(BBillExample example);
+    List<BBill> selectByExample(BBillCriteria example);
 
-    List<BBill> selectByUserId(Integer userid);
+    List<BBill> selectByUserId(String userid);
 
-    List<BBill> selectBillsByUserIdWithSortYMD(Integer userid, String yearmonthday);
-    List<BBill> selectBillsByUserIdYMD(Integer userid, String yearmonthday);
+    List<BBill> selectBillsByUserIdWithSortYMD(String userid, String yearmonthday);
 
-    List<BBill> selectOutBillsByUserIdAndSortIdWithSortYM(Integer userid, Integer sortid, String yearmonth);
-    List<BBill> selectInBillsByUserIdAndSortIdWithSortYM(Integer userid, Integer sortid, String yearmonth);
+    List<BBill> selectBillsByUserIdYMD(String userid, String yearmonthday);
 
-    String getTotalIncomeByUserIdWithYearMonth(Integer userid, String yearmonth);
-    String getTotalOutcomeByUserIdWithYearMonth(Integer userid, String yearmonth);
-    String getTotalIncomeByUserIdWithSortIdYM(Integer userid, Integer sortid, String yearmonth);
-    String getTotalOutcomeByUserIdWithSortIdYM(Integer userid, Integer sortid, String yearmonth);
-    String getTotalIncomeByUserIdWithPayIdYM(Integer userid, Integer payid, String yearmonth);
-    String getTotalOutcomeByUserIdWithPayIdYM(Integer userid, Integer payid, String yearmonth);
-    String getTotalIncomeByUserIdWithYearMonthDay(Integer userid, String yearmonthday);
-    String getTotalOutcomeByUserIdWithYearMonthDay(Integer userid, String yearmonthday);
+    List<BBill> selectOutBillsByUserIdAndSortIdWithSortYM(String userid, Integer sortid, String yearmonth);
+
+    List<BBill> selectInBillsByUserIdAndSortIdWithSortYM(String userid, Integer sortid, String yearmonth);
+
+    String getTotalIncomeByUserIdWithYearMonth(String userid, String yearmonth);
+
+    String getTotalOutcomeByUserIdWithYearMonth(String userid, String yearmonth);
+
+    String getTotalIncomeByUserIdWithSortIdYM(String userid, Integer sortid, String yearmonth);
+
+    String getTotalOutcomeByUserIdWithSortIdYM(String userid, Integer sortid, String yearmonth);
+
+    String getTotalIncomeByUserIdWithPayIdYM(String userid, Integer payid, String yearmonth);
+
+    String getTotalOutcomeByUserIdWithPayIdYM(String userid, Integer payid, String yearmonth);
+
+    String getTotalIncomeByUserIdWithYearMonthDay(String userid, String yearmonthday);
+
+    String getTotalOutcomeByUserIdWithYearMonthDay(String userid, String yearmonthday);
 
     BBill selectByPrimaryKey(Integer id);
 
-    int updateByExampleSelective(@Param("record") BBill record, @Param("example") BBillExample example);
+    int updateByExampleSelective(@Param("record") BBill record, @Param("example") BBillCriteria example);
 
-    int updateByExample(@Param("record") BBill record, @Param("example") BBillExample example);
+    int updateByExample(@Param("record") BBill record, @Param("example") BBillCriteria example);
 
     int updateByPrimaryKeySelective(BBill record);
 

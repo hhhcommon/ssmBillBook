@@ -3,7 +3,7 @@ package com.copasso.billbook.bean;
 public class BSort {
     private Integer id;
 
-    private Integer uid;
+    private String uid;
 
     private String sortName;
 
@@ -13,17 +13,18 @@ public class BSort {
 
     private Boolean income;
 
-    public BSort(){
+    public BSort() {
         super();
     }
 
-    public BSort(Integer uid, String sortName, String sortImg,Boolean income) {
+    public BSort(String uid, String sortName, String sortImg, Boolean income) {
         this.uid = uid;
         this.sortName = sortName;
         this.sortImg = sortImg;
         this.income = income;
     }
-    public BSort(Integer id, Integer uid, String sortName, String sortImg, Integer priority, Boolean income) {
+
+    public BSort(Integer id, String uid, String sortName, String sortImg, Integer priority, Boolean income) {
         this.id = id;
         this.uid = uid;
         this.sortName = sortName;
@@ -31,8 +32,6 @@ public class BSort {
         this.priority = priority;
         this.income = income;
     }
-
-
 
     public Integer getId() {
         return id;
@@ -42,11 +41,11 @@ public class BSort {
         this.id = id;
     }
 
-    public Integer getUid() {
+    public String getUid() {
         return uid;
     }
 
-    public void setUid(Integer uid) {
+    public void setUid(String uid) {
         this.uid = uid;
     }
 

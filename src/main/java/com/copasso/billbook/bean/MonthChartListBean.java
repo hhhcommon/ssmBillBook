@@ -63,18 +63,9 @@ public class MonthChartListBean extends BaseBean {
     }
 
     public static class SortTypeList {
-        private String back_color;
-        private String  money;    //此分类下的当月总收支
+        private String money;    //此分类下的当月总收支
         private BSort sort;    //此分类
         private List<BBill> list;  //此分类下的当月账单
-
-        public String getBack_color() {
-            return back_color;
-        }
-
-        public void setBack_color(String back_color) {
-            this.back_color = back_color;
-        }
 
         public String getMoney() {
             return money;

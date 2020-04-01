@@ -1,15 +1,15 @@
 package com.copasso.billbook.dao;
 
 import com.copasso.billbook.bean.BPay;
-import com.copasso.billbook.bean.BPayExample;
+import com.copasso.billbook.bean.BPayCriteria;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
 public interface BPayMapper {
-    long countByExample(BPayExample example);
+    long countByExample(BPayCriteria example);
 
-    int deleteByExample(BPayExample example);
+    int deleteByExample(BPayCriteria example);
 
     int deleteByPrimaryKey(Integer id);
 
@@ -17,16 +17,16 @@ public interface BPayMapper {
 
     int insertSelective(BPay record);
 
-    List<BPay> selectByExample(BPayExample example);
+    List<BPay> selectByExample(BPayCriteria example);
 
     //通过用户id查询用户的支付方式，包含系统自带
-    List<BPay> selectByUserId(Integer userid);
+    List<BPay> selectByUserId(String userid);
 
     BPay selectByPrimaryKey(Integer id);
 
-    int updateByExampleSelective(@Param("record") BPay record, @Param("example") BPayExample example);
+    int updateByExampleSelective(@Param("record") BPay record, @Param("example") BPayCriteria example);
 
-    int updateByExample(@Param("record") BPay record, @Param("example") BPayExample example);
+    int updateByExample(@Param("record") BPay record, @Param("example") BPayCriteria example);
 
     int updateByPrimaryKeySelective(BPay record);
 

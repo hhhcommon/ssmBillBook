@@ -1,9 +1,9 @@
 package com.copasso.billbook.bean;
 
-public class BPay2 extends BaseBean{
+public class BPay2 extends BaseBean {
     private Integer id;
 
-    private Integer uid;
+    private String uid;
 
     private String payName;
 
@@ -11,26 +11,26 @@ public class BPay2 extends BaseBean{
 
     private String payNum;
 
-    public BPay2(){
+    public BPay2() {
         super();
     }
 
-    public BPay2(BPay pay){
-        this.id=pay.getId();
-        this.uid=pay.getUid();
+    public BPay2(BPay pay) {
+        this.id = pay.getId();
+        this.uid = pay.getUid();
         this.payName = pay.getPayName();
         this.payImg = pay.getPayImg();
         this.payNum = pay.getPayNum();
     }
 
-    public BPay2(Integer uid, String payName, String payImg, String payNum) {
+    public BPay2(String uid, String payName, String payImg, String payNum) {
         this.uid = uid;
         this.payName = payName;
         this.payImg = payImg;
         this.payNum = payNum;
     }
 
-    public BPay2(Integer id, Integer uid, String payName, String payImg, String payNum) {
+    public BPay2(Integer id, String uid, String payName, String payImg, String payNum) {
         this.id = id;
         this.uid = uid;
         this.payName = payName;
@@ -46,11 +46,11 @@ public class BPay2 extends BaseBean{
         this.id = id;
     }
 
-    public Integer getUid() {
+    public String getUid() {
         return uid;
     }
 
-    public void setUid(Integer uid) {
+    public void setUid(String uid) {
         this.uid = uid;
     }
 

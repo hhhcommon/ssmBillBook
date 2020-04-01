@@ -5,8 +5,8 @@ import java.util.List;
 /**
  * 月账单明细详情
  */
-public class MonthBillListBean extends BaseBean{
-    private String  t_income;    //本月总收入
+public class MonthBillListBean extends BaseBean {
+    private String t_income;    //本月总收入
     private String t_outcome;    //本月总支出
     private String l_outcome;    //上月总支出
     private List<DayBillList> daylist;
@@ -46,7 +46,7 @@ public class MonthBillListBean extends BaseBean{
     public static class DayBillList {
 
         private String time;
-        private String  money;
+        private String money;
         private List<BBill> list;
 
 
@@ -58,7 +58,7 @@ public class MonthBillListBean extends BaseBean{
             this.time = time;
         }
 
-        public String  getMoney() {
+        public String getMoney() {
             return money;
         }
 

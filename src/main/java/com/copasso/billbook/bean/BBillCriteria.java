@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class BBillExample {
+public class BBillCriteria {
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
 
-    public BBillExample() {
+    public BBillCriteria() {
         oredCriteria = new ArrayList<Criteria>();
     }
 

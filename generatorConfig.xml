@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE generatorConfiguration
-  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
-  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
-	<context id="DB2Tables" targetRuntime="MyBatis3">
+    <context id="DB2Tables" targetRuntime="MyBatis3">
 
-		<plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
-			<property name="searchString" value="Example"/>
-			<property name="replaceString" value="Criteria"/>
-		</plugin>
+        <plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
+            <property name="searchString" value="Example"/>
+            <property name="replaceString" value="Criteria"/>
+        </plugin>
 
-		<plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>
 
-		<!-- 阻止生成注释 -->
-		<commentGenerator>
-			<property name="suppressAllComments" value="true" />
-			<!-- 是否添加数据库表的备注信息，默认为false -->
-			<property name="addRemarkComments" value="true"/>
-		</commentGenerator>
+        <!-- 阻止生成注释 -->
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+            <!-- 是否添加数据库表的备注信息，默认为false -->
+            <property name="addRemarkComments" value="true"/>
+        </commentGenerator>
 
-		<!-- 配置数据库连接 -->
-		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://localhost:3306/billbook?useSSL=false" userId="root"
-			password="1234">
-		</jdbcConnection>
+        <!-- 配置数据库连接 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/billbook?useSSL=false" userId="root"
+                        password="1234">
+        </jdbcConnection>
 
-		<javaTypeResolver>
-			<property name="forceBigDecimals" value="false" />
-		</javaTypeResolver>
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
 
-		<!-- 制定JavaBean的生成目录 -->
-		<javaModelGenerator targetPackage="com.copasso.billbook.bean"
-			targetProject=".\src\main\java">
-			<property name="enableSubPackages" value="true" />
-			<property name="trimStrings" value="true" />
-		</javaModelGenerator>
+        <!-- 制定JavaBean的生成目录 -->
+        <javaModelGenerator targetPackage="com.copasso.billbook.bean"
+                            targetProject=".\src\main\java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
 
 
-		<!-- 制定sql映射文件生成的位置 -->
-		<sqlMapGenerator targetPackage="mapper" targetProject=".\src\main\resources">
-			<property name="enableSubPackages" value="true" />
-		</sqlMapGenerator>
+        <!-- 制定sql映射文件生成的位置 -->
+        <sqlMapGenerator targetPackage="mapper" targetProject=".\src\main\resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
 
-		<!-- 制定DAO接口生成的位置 -->
-		<javaClientGenerator type="XMLMAPPER"
-			targetPackage="com.copasso.billbook.dao" targetProject=".\src\main\java">
-			<property name="enableSubPackages" value="true" />
-		</javaClientGenerator>
+        <!-- 制定DAO接口生成的位置 -->
+        <javaClientGenerator type="XMLMAPPER"
+                             targetPackage="com.copasso.billbook.dao" targetProject=".\src\main\java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
 
-		<!-- 指定每个表的生成策略 -->
-		<table tableName="bb_tally" domainObjectName="BTally"></table>
-		<!--<table tableName="bb_type" domainObjectName="BType"></table>-->
-		
-		<!--<table tableName="bb_user" domainObjectName="BUser"></table>-->
+        <!-- 指定每个表的生成策略 -->
+        <table tableName="bb_tally" domainObjectName="BTally"></table>
+        <!--<table tableName="bb_type" domainObjectName="BType"></table>-->
 
-	</context>
+        <!--<table tableName="bb_user" domainObjectName="BUser"></table>-->
+
+    </context>
 </generatorConfiguration>

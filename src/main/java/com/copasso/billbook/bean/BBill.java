@@ -9,7 +9,7 @@ public class BBill {
 
     private String content;
 
-    private Integer userid;
+    private String userid;
 
     private Integer payid;
 
@@ -23,11 +23,11 @@ public class BBill {
 
     private BSort sort;
 
-    public BBill(){
+    public BBill() {
         super();
     }
 
-    public BBill(Float cost, String content, Integer userid, Integer sortid, Integer payid, Date crdate, Boolean income) {
+    public BBill(Float cost, String content, String userid, Integer sortid, Integer payid, Date crdate, Boolean income) {
         this.cost = cost;
         this.content = content;
         this.userid = userid;
@@ -35,11 +35,11 @@ public class BBill {
         this.sortid = sortid;
         this.crdate = crdate;
         this.income = income;
-        this.version= 0;
+        this.version = 0;
     }
 
-    public BBill(Float cost, String content, Integer userid, Integer sortid, Integer payid,
-                  Date crdate, Boolean income, Integer version) {
+    public BBill(Float cost, String content, String userid, Integer sortid, Integer payid,
+                 Date crdate, Boolean income, Integer version) {
         this.cost = cost;
         this.content = content;
         this.userid = userid;
@@ -47,7 +47,7 @@ public class BBill {
         this.sortid = sortid;
         this.crdate = crdate;
         this.income = income;
-        this.version= version;
+        this.version = version;
     }
 
     public BSort getSort() {
@@ -82,11 +82,11 @@ public class BBill {
         this.content = content == null ? null : content.trim();
     }
 
-    public Integer getUserid() {
+    public String getUserid() {
         return userid;
     }
 
-    public void setUserid(Integer userid) {
+    public void setUserid(String userid) {
         this.userid = userid;
     }
 

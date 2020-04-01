@@ -1,9 +1,9 @@
 package com.copasso.billbook.bean;
 
-public class BSort2 extends BaseBean{
+public class BSort2 extends BaseBean {
     private Integer id;
 
-    private Integer uid;
+    private String uid;
 
     private String sortName;
 
@@ -13,25 +13,26 @@ public class BSort2 extends BaseBean{
 
     private Boolean income;
 
-    public BSort2(){
+    public BSort2() {
         super();
     }
 
     public BSort2(BSort sort) {
-        this.id=sort.getId();
+        this.id = sort.getId();
         this.uid = sort.getUid();
         this.sortName = sort.getSortName();
         this.sortImg = sort.getSortImg();
         this.income = sort.getIncome();
     }
 
-    public BSort2(Integer uid, String sortName, String sortImg, Boolean income) {
+    public BSort2(String uid, String sortName, String sortImg, Boolean income) {
         this.uid = uid;
         this.sortName = sortName;
         this.sortImg = sortImg;
         this.income = income;
     }
-    public BSort2(Integer id, Integer uid, String sortName, String sortImg, Integer priority, Boolean income) {
+
+    public BSort2(Integer id, String uid, String sortName, String sortImg, Integer priority, Boolean income) {
         this.id = id;
         this.uid = uid;
         this.sortName = sortName;
@@ -39,7 +40,6 @@ public class BSort2 extends BaseBean{
         this.priority = priority;
         this.income = income;
     }
-
 
 
     public Integer getId() {
@@ -50,11 +50,11 @@ public class BSort2 extends BaseBean{
         this.id = id;
     }
 
-    public Integer getUid() {
+    public String getUid() {
         return uid;
     }
 
-    public void setUid(Integer uid) {
+    public void setUid(String uid) {
         this.uid = uid;
     }
 
